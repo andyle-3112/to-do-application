@@ -1,0 +1,27 @@
+
+<div class="main-column">
+    <p class="today" id="today" draggable="true" ondragstart="drag(event)">Let's Create Some To-dos!</p>
+    <form action="/addtask" method="POST" >
+        <div class="note-row">
+            
+                <input type="text"  name="newtask" placeholder="     ...what's on your plan?" class="input" id="input">
+                 
+                <button draggable="true" formaction="/addtask" type="submit" class="submit-button" id="submit-button" >Add</button>
+            </button> 
+             
+        </div>
+
+
+    <%- include("notes.ejs") %>
+    <footer>
+        <% const currentDay = new Date(); %>
+        <% const currentYear = currentDay.getFullYear(); %>
+        <!-- Step 4 - Add a dynamic year to the footer using JS. -->
+        <p>Copyright © <%= `${currentYear}` %> </p>
+      </footer>
+</div>    
+
+
+
+
+
